@@ -18,7 +18,10 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, world!")
+		fmt.Fprintf(w, "Hello, world!\n")
+		for _, env := range os.Environ() {
+			fmt.Fprintf(w, "%s\n", env)
+		}
 	})
 
 	message("listening on port %s\n", port)
