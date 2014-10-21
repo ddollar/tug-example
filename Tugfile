@@ -1,2 +1,2 @@
-web[http]:     gin start -p $PORT
-postgres[tcp]: docker/postgres:9.3.5
+web:      gin start -p $PORT
+postgres: docker/postgres:9.3.5
