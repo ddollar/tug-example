@@ -16,8 +16,8 @@ func message(format string, a ...interface{}) {
 }
 
 func initializeDatabase() (*sql.DB, error) {
-	host := os.Getenv("POSTGRES_HOST")
-	port := os.Getenv("POSTGRES_PORT")
+	host := os.Getenv("POSTGRES_PORT_5432_TCP_ADDR")
+	port := os.Getenv("POSTGRES_PORT_5432_TCP_PORT")
 
 	db, err := sql.Open("postgres", fmt.Sprintf("host=%s port=%s user=postgres dbname=postgres sslmode=disable", host, port))
 
