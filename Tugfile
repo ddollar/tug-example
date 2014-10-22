@@ -1,2 +1,2 @@
-web:      gin start -p $PORT
+web:      gin -p $PORT
 postgres: docker/postgres:9.3.5
